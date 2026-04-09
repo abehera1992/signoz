@@ -175,7 +175,8 @@ services:
     restart: on-failure
 networks:
   signoz-net:
-    name: signoz-net
+    name: ekam-shared-network # Replaced with external ekam common network for bridge
+    external: true
 volumes:
   clickhouse:
     name: signoz-clickhouse
